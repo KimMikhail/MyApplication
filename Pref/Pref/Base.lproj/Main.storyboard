@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Name View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="NameViewController" customModule="Pref" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GradientView" customModule="Pref" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="mVR-pe-PN1">
+                                <rect key="frame" x="80" y="130" width="215" height="181"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Player" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MU7-MP-v2y">
+                                        <rect key="frame" x="0.0" y="0.0" width="215" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second Player" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bnv-u5-lfe">
+                                        <rect key="frame" x="0.0" y="49" width="215" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Third Player" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qXh-XQ-U21">
+                                        <rect key="frame" x="0.0" y="98" width="215" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fourth Player" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OgB-4o-vpD">
+                                        <rect key="frame" x="0.0" y="147" width="215" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preferance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqd-t0-ey7">
+                                <rect key="frame" x="67" y="50" width="241" height="43"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="52"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qku-3D-wkf" customClass="MyButton" customModule="Pref" customModuleProvider="target">
+                                <rect key="frame" x="87.5" y="536" width="200" height="35"/>
+                                <color key="backgroundColor" red="0.19215686269999999" green="0.32549019610000002" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="S84-UT-eTF"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="cWa-KH-rXa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="24"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="newGameButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rae-1f-lWa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfk-B3-SH5" customClass="MyButton" customModule="Pref" customModuleProvider="target">
+                                <rect key="frame" x="87.5" y="579" width="200" height="35"/>
+                                <color key="backgroundColor" red="0.19215686269999999" green="0.32549019610000002" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="4GS-A8-VR6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ADk-Cv-bbG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="24"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Resume">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resumeButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="ewf-Ni-ytf"/>
+                                    <segue destination="moT-Kj-lce" kind="show" identifier="resumeSegue" id="Aja-0a-Odk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFm-3Y-K3G" customClass="MyButton" customModule="Pref" customModuleProvider="target">
+                                <rect key="frame" x="87.5" y="340" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.56470588239999997" green="0.87450980389999999" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="nPO-Bs-6QL"/>
+                                    <constraint firstAttribute="height" constant="30" id="rel-Xs-a7Y"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Ок"/>
+                                <connections>
+                                    <segue destination="moT-Kj-lce" kind="show" identifier="ScoreSegue" id="lp2-Xv-Js8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09G-ef-tFc" customClass="MyButton" customModule="Pref" customModuleProvider="target">
+                                <rect key="frame" x="207.5" y="340" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.56470588239999997" green="0.87450980389999999" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UQw-gX-i1q"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="q9p-Pu-ThH"/>
+                                </constraints>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cx8-jH-VoL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QFm-3Y-K3G" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-20" id="1rj-6l-bYz"/>
+                            <constraint firstItem="Nqd-t0-ey7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0647321" id="EOv-gD-GJT"/>
+                            <constraint firstItem="mVR-pe-PN1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="130" id="FU8-eH-RuZ"/>
+                            <constraint firstItem="Nqd-t0-ey7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FfA-dC-w6Z"/>
+                            <constraint firstItem="09G-ef-tFc" firstAttribute="top" secondItem="OgB-4o-vpD" secondAttribute="bottom" constant="29" id="JKq-di-jDF"/>
+                            <constraint firstItem="Nfk-B3-SH5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KbP-N3-mm5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mVR-pe-PN1" secondAttribute="trailing" constant="80" id="MEN-Ha-j2B"/>
+                            <constraint firstItem="09G-ef-tFc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="20" id="RXk-IW-RYh"/>
+                            <constraint firstItem="Nqd-t0-ey7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.642512" id="TjY-C1-jfx"/>
+                            <constraint firstItem="Nfk-B3-SH5" firstAttribute="top" secondItem="qku-3D-wkf" secondAttribute="bottom" constant="8" id="cwJ-l4-B3K"/>
+                            <constraint firstItem="QFm-3Y-K3G" firstAttribute="top" secondItem="OgB-4o-vpD" secondAttribute="bottom" constant="29" id="kGR-7I-LIw"/>
+                            <constraint firstItem="mVR-pe-PN1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ker-ve-LGK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nfk-B3-SH5" secondAttribute="bottom" constant="53" id="pES-8H-EVr"/>
+                            <constraint firstItem="Nqd-t0-ey7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="sIc-Pc-53a"/>
+                            <constraint firstItem="qku-3D-wkf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xbv-bn-8Iq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zxw-ji-HNR"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="09G-ef-tFc" id="qmP-Pg-P0u"/>
+                        <outlet property="firstPlayerName" destination="MU7-MP-v2y" id="qcP-Ny-zei"/>
+                        <outlet property="fourthPlayerName" destination="OgB-4o-vpD" id="ebk-LO-ZF8"/>
+                        <outlet property="newGameButton" destination="qku-3D-wkf" id="AAt-MF-beh"/>
+                        <outlet property="okButton" destination="QFm-3Y-K3G" id="zOf-7c-s1v"/>
+                        <outlet property="resumeButton" destination="Nfk-B3-SH5" id="pYl-yg-BHr"/>
+                        <outlet property="secondPlayerName" destination="bnv-u5-lfe" id="dB1-OV-R1Y"/>
+                        <outlet property="thirdPlayerName" destination="qXh-XQ-U21" id="6dx-eR-mIM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+        <!--Score View Controller-->
+        <scene sceneID="u9I-Ui-NXw">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="moT-Kj-lce" customClass="ScoreViewController" customModule="Pref" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o5l-0E-S8s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiS-Wl-T7R" customClass="GradientView" customModule="Pref" customModuleProvider="target">
+                                <rect key="frame" x="8" y="8" width="175.5" height="321.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="YZR-xK-SCW">
+                                        <rect key="frame" x="62" y="16" width="51.5" height="135"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPT-rk-tkZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="firstScore" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81M-pJ-tqC">
+                                                <rect key="frame" x="0.0" y="99.5" width="51.5" height="35.5"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="31"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6hY-FV-etm">
+                                        <rect key="frame" x="18" y="193.5" width="140" height="120"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="firstMount" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuU-5S-l8O" customClass="MyButton" customModule="Pref" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="34.5"/>
+                                                <color key="backgroundColor" red="0.5097528134" green="0.79620400979999995" blue="0.80995315310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="16"/>
+                                                <state key="normal" title="Mount"/>
+                                                <connections>
+                                                    <action selector="mountBulletButtonsTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="1gx-t9-tbk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="firstBullet" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSK-Gb-4tN" customClass="MyButton" customModule="Pref" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="42.5" width="140" height="35"/>
+                                                <color key="backgroundColor" red="0.5097528134" green="0.79620400979999995" blue="0.80995315310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="16"/>
+                                                <state key="normal" title="Bullet"/>
+                                                <connections>
+                                                    <action selector="mountBulletButtonsTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="4uX-AJ-c0G"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="firstWist" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2O1-Jh-K5e" customClass="MyButton" customModule="Pref" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="85.5" width="140" height="34.5"/>
+                                                <color key="backgroundColor" red="0.5097528134" green="0.79620400979999995" blue="0.80995315310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="16"/>
+                                                <state key="normal" title="Wist"/>
+                                                <connections>
+                                                    <action selector="wistButtonTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="LXI-Q1-Mja"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="bAf-2O-hNd"/>
+                                            <constraint firstAttribute="height" constant="180" id="sCb-Wg-Ehh">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="120"/>
+                                            </constraint>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="YZR-xK-SCW" firstAttribute="centerX" secondItem="HiS-Wl-T7R" secondAttribute="centerX" id="7cf-30-Edw"/>
+                                    <constraint firstItem="YZR-xK-SCW" firstAttribute="top" secondItem="HiS-Wl-T7R" secondAttribute="top" constant="16" id="D8B-WG-rYX"/>
+                                    <constraint firstAttribute="bottom" secondItem="6hY-FV-etm" secondAttribute="bottom" constant="8" id="a3W-uW-T0h"/>
+                                    <constraint firstItem="6hY-FV-etm" firstAttribute="centerX" secondItem="HiS-Wl-T7R" secondAttribute="centerX" id="hj6-P9-kA1"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3vh-LC-TcK" customClass="GradientView" customModule="Pref" customModuleProvider="target">
+                                <rect key="frame" x="191.5" y="8" width="175.5" height="321.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="htn-WE-kim">
+                                        <rect key="frame" x="62" y="16" width="51.5" height="135"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXD-xI-qbC">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="secondScore" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kd-tv-WBT">
+                                                <rect key="frame" x="0.0" y="99.5" width="51.5" height="35.5"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="31"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YV5-fo-MNh">
+                                        <rect key="frame" x="18" y="193.5" width="140" height="120"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="secondMount" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7x-aW-0At" customClass="MyButton" customModule="Pref" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="34.5"/>
+                                                <color key="backgroundColor" red="0.5097528134" green="0.79620400979999995" blue="0.80995315310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="16"/>
+                                                <state key="normal" title="Mount"/>
+                                                <connections>
+                                                    <action selector="mountBulletButtonsTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="EOo-6K-cp6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="secondBullet" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgD-yS-Mr4" customClass="MyButton" customModule="Pref" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="42.5" width="140" height="35"/>
+                                                <color key="backgroundColor" red="0.5097528134" green="0.79620400979999995" blue="0.80995315310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="16"/>
+                                                <state key="normal" title="Bullet"/>
+                                                <connections>
+                                                    <action selector="mountBulletButtonsTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="xFK-IC-Om3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="secondWist" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7r-iF-eLJ" customClass="MyButton" customModule="Pref" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="85.5" width="140" height="34.5"/>
+                                                <color key="backgroundColor" red="0.5097528134" green="0.79620400979999995" blue="0.80995315310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="16"/>
+                                                <state key="normal" title="Wist"/>
+                                                <connections>
+                                                    <action selector="wistButtonTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="yzj-nq-501"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="1RP-Hb-IlY">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="120"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="140" id="s6T-gx-2uH"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="YV5-fo-MNh" secondAttribute="bottom" constant="8" id="34s-A8-Zby"/>
+                                    <constraint firstItem="htn-WE-kim" firstAttribute="top" secondItem="3vh-LC-TcK" secondAttribute="top" constant="16" id="6vz-Qq-VcR"/>
+                                    <constraint firstItem="YV5-fo-MNh" firstAttribute="centerX" secondItem="3vh-LC-TcK" secondAttribute="centerX" id="cIV-dx-Nhs"/>
+                                    <constraint firstItem="htn-WE-kim" firstAttribute="centerX" secondItem="3vh-LC-TcK" secondAttribute="centerX" id="dZS-bt-sAj"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xlg-sC-D2t" customClass="GradientView" customModule="Pref" customModuleProvider="target">
+                                <rect key="frame" x="8" y="337.5" width="175.5" height="321.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="YhP-0g-ZBo">
+                                        <rect key="frame" x="62" y="16" width="51.5" height="135"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lq0-pT-rj2">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="thirdScore" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-ya-0f4">
+                                                <rect key="frame" x="0.0" y="99.5" width="51.5" height="35.5"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="31"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fFc-6P-Ej2">
+                                        <rect key="frame" x="18" y="193.5" width="140" height="120"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="thirdMount" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3p-bw-o9z" customClass="MyButton" customModule="Pref" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="34.5"/>
+                                                <color key="backgroundColor" red="0.5097528134" green="0.79620400979999995" blue="0.80995315310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="16"/>
+                                                <state key="normal" title="Mount"/>
+                                                <connections>
+                                                    <action selector="mountBulletButtonsTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="nsH-Zf-tOP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="thirdBullet" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="872-Ib-bVL" customClass="MyButton" customModule="Pref" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="42.5" width="140" height="35"/>
+                                                <color key="backgroundColor" red="0.5097528134" green="0.79620400979999995" blue="0.80995315310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="16"/>
+                                                <state key="normal" title="Bullet"/>
+                                                <connections>
+                                                    <action selector="mountBulletButtonsTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="C9w-lw-Uel"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="thirdWist" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jct-qm-Fuf" customClass="MyButton" customModule="Pref" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="85.5" width="140" height="34.5"/>
+                                                <color key="backgroundColor" red="0.5097528134" green="0.79620400979999995" blue="0.80995315310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="16"/>
+                                                <state key="normal" title="Wist"/>
+                                                <connections>
+                                                    <action selector="wistButtonTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="Gx2-Gz-bMs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="APP-BW-alo">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="120"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="140" id="b4U-fN-XNP"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="fFc-6P-Ej2" secondAttribute="bottom" constant="8" id="3cE-wc-B4f"/>
+                                    <constraint firstItem="YhP-0g-ZBo" firstAttribute="top" secondItem="Xlg-sC-D2t" secondAttribute="top" constant="16" id="L7P-Rd-2BS"/>
+                                    <constraint firstItem="fFc-6P-Ej2" firstAttribute="centerX" secondItem="Xlg-sC-D2t" secondAttribute="centerX" id="d8O-Yr-PHm"/>
+                                    <constraint firstItem="YhP-0g-ZBo" firstAttribute="centerX" secondItem="Xlg-sC-D2t" secondAttribute="centerX" id="eEG-0T-dsi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Se-w0-OqG" customClass="GradientView" customModule="Pref" customModuleProvider="target">
+                                <rect key="frame" x="191.5" y="337.5" width="175.5" height="321.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="Vm6-jy-fQ9">
+                                        <rect key="frame" x="62" y="16" width="51.5" height="135"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4j-d9-APo">
+                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="fourthScore" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsq-Os-k2F">
+                                                <rect key="frame" x="0.0" y="99.5" width="51.5" height="35.5"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="31"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="P34-EI-tc7">
+                                        <rect key="frame" x="18" y="193.5" width="140" height="120"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="fourthMount" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbG-lk-0MA" customClass="MyButton" customModule="Pref" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="34.5"/>
+                                                <color key="backgroundColor" red="0.5097528134" green="0.79620400979999995" blue="0.80995315310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="16"/>
+                                                <state key="normal" title="Mount"/>
+                                                <connections>
+                                                    <action selector="mountBulletButtonsTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="YFi-SG-67p"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="fourthBullet" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMa-OR-k6j" customClass="MyButton" customModule="Pref" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="42.5" width="140" height="35"/>
+                                                <color key="backgroundColor" red="0.5097528134" green="0.79620400979999995" blue="0.80995315310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="16"/>
+                                                <state key="normal" title="Bullet"/>
+                                                <connections>
+                                                    <action selector="mountBulletButtonsTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="8Th-jA-oMW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="fourthWist" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsn-oz-hri" customClass="MyButton" customModule="Pref" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="85.5" width="140" height="34.5"/>
+                                                <color key="backgroundColor" red="0.5097528134" green="0.79620400979999995" blue="0.80995315310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="16"/>
+                                                <state key="normal" title="Wist"/>
+                                                <connections>
+                                                    <action selector="wistButtonTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="MfW-6W-4YK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="6lc-0f-35C">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="120"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="140" id="n3V-Ra-Mmj"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Vm6-jy-fQ9" firstAttribute="centerX" secondItem="0Se-w0-OqG" secondAttribute="centerX" id="QDL-Xn-yN5"/>
+                                    <constraint firstItem="P34-EI-tc7" firstAttribute="centerX" secondItem="0Se-w0-OqG" secondAttribute="centerX" id="tAs-Z6-hhz"/>
+                                    <constraint firstAttribute="bottom" secondItem="P34-EI-tc7" secondAttribute="bottom" constant="8" id="xEs-tM-I2a"/>
+                                    <constraint firstItem="Vm6-jy-fQ9" firstAttribute="top" secondItem="0Se-w0-OqG" secondAttribute="top" constant="16" id="zd2-zK-YSb"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fw8-3h-8XS">
+                                <rect key="frame" x="172.5" y="318.5" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.22352941179999999" green="0.32156862749999998" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="bDN-gT-zqO"/>
+                                    <constraint firstAttribute="height" constant="30" id="lPK-Xw-x0i"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="cancelMenuAcion:" destination="moT-Kj-lce" eventType="touchUpInside" id="dPN-lK-vwj"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" restorationIdentifier="wistView" translatesAutoresizingMaskIntoConstraints="NO" id="Y6q-Wv-Acm">
+                                <rect key="frame" x="38.5" y="247" width="298" height="173"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="four" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iao-ar-arm" customClass="BetButton" customModule="Pref" customModuleProvider="target">
+                                        <rect key="frame" x="37" y="23" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="24"/>
+                                        <state key="normal" title="4">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="wistBetButtonsTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="v8f-kP-gCR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="six" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVQ-5G-urt" customClass="BetButton" customModule="Pref" customModuleProvider="target">
+                                        <rect key="frame" x="135" y="23" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="24"/>
+                                        <state key="normal" title="6">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="wistBetButtonsTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="P9F-0u-dMr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="eight" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21a-uu-Nt0" customClass="BetButton" customModule="Pref" customModuleProvider="target">
+                                        <rect key="frame" x="240" y="23" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="24"/>
+                                        <state key="normal" title="8">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="wistBetButtonsTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="5Se-tk-inl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="ten" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eP0-uG-aYZ" customClass="BetButton" customModule="Pref" customModuleProvider="target">
+                                        <rect key="frame" x="92" y="77" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="24"/>
+                                        <state key="normal" title="10">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="wistBetButtonsTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="vJc-rc-G3I"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="twelve" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUg-67-dks" customClass="BetButton" customModule="Pref" customModuleProvider="target">
+                                        <rect key="frame" x="183" y="77" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="24"/>
+                                        <state key="normal" title="12">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="wistBetButtonsTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="Y81-AU-vjw"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TCt-Hb-fRu">
+                                        <rect key="frame" x="101" y="133" width="97" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="OkWist" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsT-e8-Eeb">
+                                        <rect key="frame" x="211" y="135" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.04808270186" green="0.068908624350000003" blue="0.13334038849999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="check-mark-10-64">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="wistBetButtonsTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="L7t-uq-Bbf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="closeButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbc-j6-rHr">
+                                        <rect key="frame" x="58" y="135" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.04808270186" green="0.068908624350000003" blue="0.13334038849999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="x-mark-4-64">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="wistBetButtonsTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="fdg-rJ-lel"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="298" id="lxs-xh-L2q"/>
+                                    <constraint firstAttribute="height" constant="173" id="mdr-nh-amF"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="MUg-67-dks"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="MUg-67-dks"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRF-xC-4YK">
+                                <rect key="frame" x="38.5" y="247" width="298" height="173"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mDi-7V-TYG">
+                                        <rect key="frame" x="101" y="133" width="97" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j29-pL-rmg" customClass="BetButton" customModule="Pref" customModuleProvider="target">
+                                        <rect key="frame" x="28" y="21" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="24"/>
+                                        <state key="normal" title="2">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="f6h-jQ-JdT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKw-EH-KfY" customClass="BetButton" customModule="Pref" customModuleProvider="target">
+                                        <rect key="frame" x="126" y="21" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="24"/>
+                                        <state key="normal" title="4">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="F6Q-vv-Vd4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="6" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFk-Yw-msk" customClass="BetButton" customModule="Pref" customModuleProvider="target">
+                                        <rect key="frame" x="232" y="21" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="24"/>
+                                        <state key="normal" title="6">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="1Ob-YI-ic1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="8" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GII-4V-QVT" customClass="BetButton" customModule="Pref" customModuleProvider="target">
+                                        <rect key="frame" x="83" y="75" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="24"/>
+                                        <state key="normal" title="8">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="BLQ-me-o6X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="10" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5g-ml-Edo" customClass="BetButton" customModule="Pref" customModuleProvider="target">
+                                        <rect key="frame" x="174" y="75" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="24"/>
+                                        <state key="normal" title="10">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="sgu-Bs-4im"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Ok" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jdp-Ot-9Bg">
+                                        <rect key="frame" x="212" y="135" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.04808270186" green="0.068908624350000003" blue="0.13334038849999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="check-mark-10-64">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="betButtonTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="4f7-gF-gwi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ev-Th-tHt">
+                                        <rect key="frame" x="58" y="135" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.04808270186" green="0.068908624350000003" blue="0.13334038849999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="x-mark-4-64">
+                                            <color key="titleColor" red="0.04808270186" green="0.068908624350000003" blue="0.13334038849999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonAction:" destination="moT-Kj-lce" eventType="touchUpInside" id="jcK-kR-aXt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="298" id="itc-iB-BCt"/>
+                                    <constraint firstAttribute="height" constant="173" id="tp7-Xf-g1D"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="h5g-ml-Edo"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="h5g-ml-Edo"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="firstChooseWist" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzw-1l-uAy">
+                                <rect key="frame" x="8" y="8" width="175.5" height="321.5"/>
+                                <connections>
+                                    <action selector="chooseWistButtonTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="DJd-s7-as6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="secondChooseWist" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B09-q5-VtN">
+                                <rect key="frame" x="191.5" y="8" width="175.5" height="321.5"/>
+                                <connections>
+                                    <action selector="chooseWistButtonTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="Olc-FO-wzF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="thirdChooseWist" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYD-Ct-KFS">
+                                <rect key="frame" x="8" y="337.5" width="175.5" height="321.5"/>
+                                <connections>
+                                    <action selector="chooseWistButtonTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="BFR-Ah-rli"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="fourthChooseWist" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLd-jN-Zg1">
+                                <rect key="frame" x="191.5" y="337.5" width="175.5" height="321.5"/>
+                                <connections>
+                                    <action selector="chooseWistButtonTapped:" destination="moT-Kj-lce" eventType="touchUpInside" id="Bwd-mm-Jwc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="B09-q5-VtN" firstAttribute="bottom" secondItem="o5l-0E-S8s" secondAttribute="centerY" constant="-4" id="0cg-0u-OQA"/>
+                            <constraint firstItem="fRF-xC-4YK" firstAttribute="centerY" secondItem="o5l-0E-S8s" secondAttribute="centerY" id="1gk-rg-ruI"/>
+                            <constraint firstItem="GMY-ro-EhY" firstAttribute="bottom" secondItem="IYD-Ct-KFS" secondAttribute="bottom" constant="8" id="2Dd-tB-w0Q"/>
+                            <constraint firstItem="gzw-1l-uAy" firstAttribute="bottom" secondItem="o5l-0E-S8s" secondAttribute="centerY" constant="-4" id="7HE-el-dPN"/>
+                            <constraint firstItem="sLd-jN-Zg1" firstAttribute="leading" secondItem="o5l-0E-S8s" secondAttribute="centerX" constant="4" id="7cQ-r2-f6s"/>
+                            <constraint firstItem="IYD-Ct-KFS" firstAttribute="leading" secondItem="GMY-ro-EhY" secondAttribute="leading" constant="8" id="7gH-tF-60t"/>
+                            <constraint firstItem="HiS-Wl-T7R" firstAttribute="bottom" secondItem="o5l-0E-S8s" secondAttribute="centerY" constant="-4" id="9Pd-c1-gUg"/>
+                            <constraint firstItem="3vh-LC-TcK" firstAttribute="top" secondItem="GMY-ro-EhY" secondAttribute="top" constant="8" id="AOC-u3-OTH"/>
+                            <constraint firstItem="Xlg-sC-D2t" firstAttribute="leading" secondItem="GMY-ro-EhY" secondAttribute="leading" constant="8" id="BlS-hn-x3T"/>
+                            <constraint firstItem="0Se-w0-OqG" firstAttribute="top" secondItem="o5l-0E-S8s" secondAttribute="centerY" constant="4" id="EkE-0t-f1o"/>
+                            <constraint firstItem="Y6q-Wv-Acm" firstAttribute="centerY" secondItem="o5l-0E-S8s" secondAttribute="centerY" id="GeW-xK-HBS"/>
+                            <constraint firstItem="sLd-jN-Zg1" firstAttribute="top" secondItem="o5l-0E-S8s" secondAttribute="centerY" constant="4" id="I03-IG-TUw"/>
+                            <constraint firstItem="3vh-LC-TcK" firstAttribute="bottom" secondItem="o5l-0E-S8s" secondAttribute="centerY" constant="-4" id="JPZ-tR-Ulv"/>
+                            <constraint firstItem="Xlg-sC-D2t" firstAttribute="top" secondItem="o5l-0E-S8s" secondAttribute="centerY" constant="4" id="MFn-dC-ctL"/>
+                            <constraint firstItem="HiS-Wl-T7R" firstAttribute="leading" secondItem="GMY-ro-EhY" secondAttribute="leading" constant="8" id="MpX-dg-pHW"/>
+                            <constraint firstItem="HiS-Wl-T7R" firstAttribute="top" secondItem="GMY-ro-EhY" secondAttribute="top" constant="8" id="Mrd-T6-ph5"/>
+                            <constraint firstItem="IYD-Ct-KFS" firstAttribute="top" secondItem="o5l-0E-S8s" secondAttribute="centerY" constant="4" id="MxU-q7-MYz"/>
+                            <constraint firstItem="GMY-ro-EhY" firstAttribute="trailing" secondItem="0Se-w0-OqG" secondAttribute="trailing" constant="8" id="OKe-CE-6gR"/>
+                            <constraint firstItem="IYD-Ct-KFS" firstAttribute="trailing" secondItem="o5l-0E-S8s" secondAttribute="centerX" constant="-4" id="OND-8b-2Em"/>
+                            <constraint firstItem="Y6q-Wv-Acm" firstAttribute="centerX" secondItem="o5l-0E-S8s" secondAttribute="centerX" id="QOb-is-nCR"/>
+                            <constraint firstItem="HiS-Wl-T7R" firstAttribute="trailing" secondItem="o5l-0E-S8s" secondAttribute="centerX" constant="-4" id="UEc-5E-T80"/>
+                            <constraint firstItem="Fw8-3h-8XS" firstAttribute="centerX" secondItem="o5l-0E-S8s" secondAttribute="centerX" id="Usu-cR-x5W"/>
+                            <constraint firstItem="0Se-w0-OqG" firstAttribute="leading" secondItem="o5l-0E-S8s" secondAttribute="centerX" constant="4" id="W91-y5-qek"/>
+                            <constraint firstItem="B09-q5-VtN" firstAttribute="top" secondItem="GMY-ro-EhY" secondAttribute="top" constant="8" id="YJT-xx-Dpt"/>
+                            <constraint firstItem="gzw-1l-uAy" firstAttribute="trailing" secondItem="o5l-0E-S8s" secondAttribute="centerX" constant="-4" id="ZAS-iv-WDx"/>
+                            <constraint firstItem="GMY-ro-EhY" firstAttribute="bottom" secondItem="Xlg-sC-D2t" secondAttribute="bottom" constant="8" id="a21-o0-9ZX"/>
+                            <constraint firstItem="B09-q5-VtN" firstAttribute="leading" secondItem="o5l-0E-S8s" secondAttribute="centerX" constant="4" id="aBz-3b-jeB"/>
+                            <constraint firstItem="fRF-xC-4YK" firstAttribute="centerX" secondItem="o5l-0E-S8s" secondAttribute="centerX" id="aSN-Wk-K8O"/>
+                            <constraint firstItem="Fw8-3h-8XS" firstAttribute="centerY" secondItem="o5l-0E-S8s" secondAttribute="centerY" id="g4J-8u-xNN"/>
+                            <constraint firstItem="gzw-1l-uAy" firstAttribute="leading" secondItem="GMY-ro-EhY" secondAttribute="leading" constant="8" id="hAH-Go-k1R"/>
+                            <constraint firstItem="GMY-ro-EhY" firstAttribute="trailing" secondItem="B09-q5-VtN" secondAttribute="trailing" constant="8" id="hu4-d9-RIR"/>
+                            <constraint firstItem="3vh-LC-TcK" firstAttribute="leading" secondItem="o5l-0E-S8s" secondAttribute="centerX" constant="4" id="iFB-IR-GFw"/>
+                            <constraint firstItem="GMY-ro-EhY" firstAttribute="bottom" secondItem="0Se-w0-OqG" secondAttribute="bottom" constant="8" id="kKQ-uF-rbb"/>
+                            <constraint firstItem="GMY-ro-EhY" firstAttribute="bottom" secondItem="sLd-jN-Zg1" secondAttribute="bottom" constant="8" id="lpR-O4-mRw"/>
+                            <constraint firstItem="GMY-ro-EhY" firstAttribute="trailing" secondItem="3vh-LC-TcK" secondAttribute="trailing" constant="8" id="t7I-IY-S4b"/>
+                            <constraint firstItem="GMY-ro-EhY" firstAttribute="trailing" secondItem="sLd-jN-Zg1" secondAttribute="trailing" constant="8" id="wJM-ST-NgN"/>
+                            <constraint firstItem="Xlg-sC-D2t" firstAttribute="trailing" secondItem="o5l-0E-S8s" secondAttribute="centerX" constant="-4" id="xPC-Dh-XOH"/>
+                            <constraint firstItem="gzw-1l-uAy" firstAttribute="top" secondItem="GMY-ro-EhY" secondAttribute="top" constant="8" id="xY8-Jt-92L"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GMY-ro-EhY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="B4N-vz-rfx"/>
+                    <connections>
+                        <outlet property="betButton" destination="jdp-Ot-9Bg" id="fte-fr-R0e"/>
+                        <outlet property="betTextField" destination="mDi-7V-TYG" id="5iZ-Ng-IVF"/>
+                        <outlet property="betView" destination="fRF-xC-4YK" id="lBW-xl-v6x"/>
+                        <outlet property="firstPlayer" destination="aPT-rk-tkZ" id="MK2-a5-Nx8"/>
+                        <outlet property="firstPlayerButton" destination="gzw-1l-uAy" id="SiB-Ed-KI0"/>
+                        <outlet property="firstPlayerScore" destination="81M-pJ-tqC" id="h0G-2u-lIs"/>
+                        <outlet property="firstPlayerView" destination="HiS-Wl-T7R" id="oFm-kT-gCe"/>
+                        <outlet property="firstPlayerWistButton" destination="2O1-Jh-K5e" id="iN8-dY-0ew"/>
+                        <outlet property="fourthBulletButton" destination="vMa-OR-k6j" id="83X-R4-Nqp"/>
+                        <outlet property="fourthMountButton" destination="IbG-lk-0MA" id="hD7-8a-ySY"/>
+                        <outlet property="fourthPlayer" destination="w4j-d9-APo" id="7DI-fm-cDk"/>
+                        <outlet property="fourthPlayerButton" destination="sLd-jN-Zg1" id="nOz-Th-o4W"/>
+                        <outlet property="fourthPlayerScore" destination="Fsq-Os-k2F" id="q27-z3-NFD"/>
+                        <outlet property="fourthPlayerView" destination="0Se-w0-OqG" id="pgc-fB-Tej"/>
+                        <outlet property="fourthPlayerWistButton" destination="xsn-oz-hri" id="4BX-pO-78a"/>
+                        <outlet property="mainMenuButton" destination="Fw8-3h-8XS" id="Fur-sy-Up0"/>
+                        <outlet property="secondPlayer" destination="LXD-xI-qbC" id="Rr2-uO-yJz"/>
+                        <outlet property="secondPlayerButton" destination="B09-q5-VtN" id="Zbj-0h-z7m"/>
+                        <outlet property="secondPlayerScore" destination="8kd-tv-WBT" id="giY-9E-axg"/>
+                        <outlet property="secondPlayerView" destination="3vh-LC-TcK" id="D9c-4S-6Ge"/>
+                        <outlet property="secondPlayerWistButton" destination="o7r-iF-eLJ" id="aas-aI-NSi"/>
+                        <outlet property="thirdPlayer" destination="Lq0-pT-rj2" id="M2E-7T-f1i"/>
+                        <outlet property="thirdPlayerButton" destination="IYD-Ct-KFS" id="QfD-3V-gsk"/>
+                        <outlet property="thirdPlayerScore" destination="aGd-ya-0f4" id="pBR-kD-vRc"/>
+                        <outlet property="thirdPlayerView" destination="Xlg-sC-D2t" id="vzs-jy-fYo"/>
+                        <outlet property="thirdPlayerWistButton" destination="Jct-qm-Fuf" id="zAs-IX-sks"/>
+                        <outlet property="wistOkButton" destination="QsT-e8-Eeb" id="C69-3R-P2Y"/>
+                        <outlet property="wistTextField" destination="TCt-Hb-fRu" id="q6j-GC-FGz"/>
+                        <outlet property="wistView" destination="Y6q-Wv-Acm" id="lbI-pj-h2y"/>
+                        <outletCollection property="viewStack" destination="HiS-Wl-T7R" collectionClass="NSMutableArray" id="GVx-J8-PWB"/>
+                        <outletCollection property="viewStack" destination="3vh-LC-TcK" collectionClass="NSMutableArray" id="nfR-zH-94d"/>
+                        <outletCollection property="viewStack" destination="Xlg-sC-D2t" collectionClass="NSMutableArray" id="pBq-o9-C8N"/>
+                        <outletCollection property="viewStack" destination="0Se-w0-OqG" collectionClass="NSMutableArray" id="9wQ-Mr-nNe"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="mainScreen" id="w3I-NI-UIf"/>
+                        <segue destination="LPd-MY-eHs" kind="show" identifier="ShowResults" id="5Rh-eu-4b1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BE4-Jw-fyF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="866.25" y="135.21126760563379"/>
+        </scene>
+        <!--Results View Controller-->
+        <scene sceneID="PUb-Y0-8pF">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="LPd-MY-eHs" customClass="ResultsViewController" customModule="Pref" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QOv-VP-ICy" customClass="GradientView" customModule="Pref" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="XLR-2K-Kmw">
+                                <rect key="frame" x="16" y="333.5" width="343" height="289"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gHp-Gv-KEN">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIp-jN-tCn">
+                                                <rect key="frame" x="0.0" y="0.0" width="174.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvf-r6-QRO">
+                                                <rect key="frame" x="182.5" y="0.0" width="160.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldItalicMT" family="Courier New" pointSize="29"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YEI-k2-G3I">
+                                        <rect key="frame" x="0.0" y="85" width="343" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9K-e3-vqL">
+                                                <rect key="frame" x="0.0" y="0.0" width="174.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phA-0Y-eyf">
+                                                <rect key="frame" x="182.5" y="0.0" width="160.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldItalicMT" family="Courier New" pointSize="29"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5JK-pn-u1p">
+                                        <rect key="frame" x="0.0" y="170" width="343" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HlR-zJ-b40">
+                                                <rect key="frame" x="0.0" y="0.0" width="174.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoV-6e-eO0">
+                                                <rect key="frame" x="182.5" y="0.0" width="160.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldItalicMT" family="Courier New" pointSize="29"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="psT-0e-N4z">
+                                        <rect key="frame" x="0.0" y="255" width="343" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BX-SQ-AFz">
+                                                <rect key="frame" x="0.0" y="0.0" width="174.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcC-RK-4q0">
+                                                <rect key="frame" x="182.5" y="0.0" width="160.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldItalicMT" family="Courier New" pointSize="29"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vka-w4-c0j">
+                                <rect key="frame" x="103.5" y="100" width="168.5" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="SVC-Q4-7uC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldItalicMT" family="Courier New" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdN-ef-WLZ">
+                                <rect key="frame" x="16" y="20" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="LPd-MY-eHs" eventType="touchUpInside" id="6gJ-IF-yRW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2JX-aZ-xbz" firstAttribute="trailing" secondItem="XLR-2K-Kmw" secondAttribute="trailing" constant="16" id="EVK-Uc-Z0x"/>
+                            <constraint firstItem="XLR-2K-Kmw" firstAttribute="top" secondItem="QOv-VP-ICy" secondAttribute="centerY" id="Pco-0s-DOG"/>
+                            <constraint firstItem="Vka-w4-c0j" firstAttribute="centerX" secondItem="2JX-aZ-xbz" secondAttribute="centerX" id="Sol-Hv-v7S"/>
+                            <constraint firstItem="XLR-2K-Kmw" firstAttribute="leading" secondItem="2JX-aZ-xbz" secondAttribute="leading" constant="16" id="fqk-p0-5ZT"/>
+                            <constraint firstItem="XLR-2K-Kmw" firstAttribute="centerX" secondItem="QOv-VP-ICy" secondAttribute="centerX" id="pSo-bt-3nj"/>
+                            <constraint firstItem="Vka-w4-c0j" firstAttribute="top" secondItem="2JX-aZ-xbz" secondAttribute="top" constant="100" id="yia-Ue-O14"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2JX-aZ-xbz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rr7-BA-PaQ"/>
+                    <connections>
+                        <outlet property="firstNameLabel" destination="rIp-jN-tCn" id="O4a-Vc-BBj"/>
+                        <outlet property="firstScoreLabel" destination="Rvf-r6-QRO" id="Nq1-SL-tyn"/>
+                        <outlet property="fourthNameLabel" destination="9BX-SQ-AFz" id="T2L-4t-NNZ"/>
+                        <outlet property="fourthScoreLabel" destination="QcC-RK-4q0" id="vhU-5K-c8E"/>
+                        <outlet property="secondNameLabel" destination="p9K-e3-vqL" id="osP-gB-bfQ"/>
+                        <outlet property="secondScoreLabel" destination="phA-0Y-eyf" id="N0W-gg-O5f"/>
+                        <outlet property="thirdNameLabel" destination="HlR-zJ-b40" id="BDa-ed-4RB"/>
+                        <outlet property="thirdScoreLabel" destination="JoV-6e-eO0" id="70V-ee-PHH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cCz-cU-YPn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1634.4000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="lp2-Xv-Js8"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="check-mark-10-64" width="64" height="64"/>
+        <image name="x-mark-4-64" width="64" height="64"/>
+    </resources>
+</document>
